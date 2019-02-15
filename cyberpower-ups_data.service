@@ -1,0 +1,11 @@
+[Unit]
+Description=Query Cyberpower Business Power Panel Data
+After=network.target
+
+[Service]
+Type=simple
+User=zabbix
+ExecStart=/etc/zabbix/bin/cyberpower-ups_data.sh
+
+[Install]
+WantedBy=multi-user.target
